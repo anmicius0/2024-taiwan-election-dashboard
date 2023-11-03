@@ -8,7 +8,7 @@
       <NuxtPage> </NuxtPage>
     </main>
 
-    <Footer />
+    <LazyFooter />
   </div>
 </template>
 
