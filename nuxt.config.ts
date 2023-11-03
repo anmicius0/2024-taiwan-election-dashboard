@@ -2,7 +2,18 @@
 export default defineNuxtConfig({
   devtools: { enabled: process.env.NODE_ENV !== "production" },
   modules: ["@nuxtjs/google-fonts", "@nuxtjs/i18n", "@nuxt/ui"],
-  css: ["~/assets/css/main.scss"],
+  nitro: {
+    compressPublicAssets: true,
+  },
+  app: {
+    head: {
+      titleTemplate: "%s | Allen Spring",
+      meta: [
+        { charset: "utf-8" },
+        { name: "viewport", content: "width=device-width, initial-scale=1" },
+      ],
+    },
+  },
   hooks: {
     "build:before": async () => {
       const { exec } = require("child_process");
@@ -32,9 +43,10 @@ export default defineNuxtConfig({
   },
   i18n: {
     locales: [
-      { code: "en", name: "English", file: "en.json" },
-      { code: "zh", name: "中文", file: "zh.json" },
+      { code: "en", name: "English", iso: "en", file: "en.json" },
+      { code: "zh", name: "中文", iso: "zh", file: "zh.json" },
     ],
+    baseUrl: "tps://2024-tw-presidential.vercel.app/",
     defaultLocale: "en",
     lazy: true,
     langDir: "locales",

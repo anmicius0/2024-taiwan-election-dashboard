@@ -7,10 +7,10 @@
       <div class="w-full px-8 md:w-1/2">
         <div>
           <h3 class="font-bold text-gray-900">
-            {{ $t("footer.about.title") }}
+            {{ $t("components.footer.about.title") }}
           </h3>
           <p class="py-4 text-sm text-gray-600">
-            {{ $t("footer.about.description") }}
+            {{ $t("components.footer.about.description") }}
           </p>
         </div>
       </div>
@@ -19,7 +19,7 @@
       <div class="w-full px-8 md:w-1/2">
         <div>
           <h3 class="font-bold text-gray-900">
-            {{ $t("footer.donation.title") }}
+            {{ $t("components.footer.donation.title") }}
           </h3>
           <ul class="pt-3 text-sm">
             <li>
@@ -27,7 +27,7 @@
                 class="hover:text-underline py-1 text-gray-600 no-underline hover:text-gray-900"
                 :to="donationLink"
               >
-                {{ $t("footer.donation.revolut") }}
+                {{ $t("components.footer.donation.revolut") }}
               </NuxtLink>
             </li>
           </ul>

@@ -1,45 +1,71 @@
 {
-  "header": {
-    "title": "Allen Spring",
-    "taiwan": "2024 Taiwan Election",
-    "blog": "Blog"
-  },
-  "footer": {
-    "about": {
-      "title": "About Lin Shaoheng",
-      "description": "I am an engineering student who is interested in social issues. I like programming and creating some interesting things. I think programming is an art that can express one's thoughts and emotions. I hope to be able to express myself through My skills can bring positive impact to society."
+  "components": {
+    "header": {
+      "title": "林Shaoheng Allen Spring",
+      "taiwan": "2024 presidential poll",
+      "blog": "article"
     },
-    "donation": {
-      "title": "Donate easily to save poor students",
-      "revolut": "Revolut (credit card donation)"
+    "footer": {
+      "about": {
+        "title": "About Lin Shaoheng",
+        "description": "I am an engineering student who is interested in social issues. I like programming and creating some interesting things. I think programming is an art that can express one's thoughts and emotions. I hope to be able to express myself through My skills can bring positive impact to society."
+      },
+      "donation": {
+        "title": "Donate easily to save poor students",
+        "revolut": "Revolut (credit card donation)"
+      }
+    },
+    "oplist": {
+      "title": "Latest poll",
+      "institution": "institution",
+      "date": "start date",
+      "sample": "Sample number",
+      "dpp": "Lai Qingde",
+      "tpp": "Ke Wenzhe",
+      "kmt": "Hou Youyi",
+      "gtm": "Guo Taimin",
+      "undecided": "undecided",
+      "more": "See all polls"
+    },
+    "countdown": {
+      "title": "There is still time until the election",
+      "days": "days",
+      "hours": "hours",
+      "minutes": "minutes",
+      "seconds": "seconds"
+    },
+    "opchart": {
+      "filters": {
+        "formosa": "Formosa (pro DPP)",
+        "cnews": "CNews (🇨🇳 Chinese tie)",
+        "newtalk": "NewTalk",
+        "ettoday": "ETtoday (🇨🇳 Chinese tie)",
+        "tpof": "TPOF",
+        "tvbs": "TVBS (🇨🇳 Chinese tie)"
+      }
     }
   },
-  "oplist": {
-    "title": "Latest poll",
-    "institution": "Institution",
-    "date": "Date",
-    "sample": "Sample size",
-    "dpp": "Lai Qingde",
-    "tpp": "Ke Wenzhe",
-    "kmt": "Hou Youyi",
-    "gtm": "Guo Taimin",
-    "undecided": "Undecided",
-    "more": "View all data"
-  },
-  "page": {
+  "pages": {
     "home": {
-      "title": "Hi, I'm Allen Spring",
-      "subtitle": "I study computer science and I make shits",
-      "making": "2024 Taiwan election dashboard",
+      "tab": "Homepage",
+      "title": "Hi, I am Lin Shaoheng aka. Allen Spring",
+      "subtitle": "I like programming and creating interesting things",
+      "making": "(should be) a relatively accurate combination of voters for the 2024 Taiwan presidential election",
       "link": "2024-Taiwan"
     },
     "election": {
-      "title": "(Should be) a more accurate opinion poll aggregation",
-      "subtitle": "In order to reduce the impact of political manipulation on election polls, we can provide more objective and reliable information on voter intentions by averaging poll data from multiple different sources."
-    },
-    "all-op": {
-      "title": "All latest polls",
-      "subtitle": ""
+      "home": {
+        "title": "(Should be) a more accurate poll synthesis",
+        "subtitle": "In order to reduce the impact of political manipulation on election polls, we can provide more objective and reliable information on voter intentions by averaging poll data from multiple different sources."
+      }
+    }
+  },
+  "data": {
+    "candidates": {
+      "dpp": "Lai Qingde",
+      "kmt": "Hou Youyi",
+      "tpp": "Kewenzhe",
+      "gtm": "Tai Ming Gou"
     }
   }
 }

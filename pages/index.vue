@@ -1,29 +1,38 @@
 <template>
-  <div
-    class="text-centerjustify-center flex flex-col items-center space-y-4 text-center"
-  >
+  <div class="flex flex-col items-center justify-center space-y-4 text-center">
     <UAvatar
       size="3xl"
       src="/Tater.gif"
       alt="Avatar of Tater eating a potato"
     />
-    <h1 class="py-4 text-3xl font-bold">{{ $t("page.home.title") }}</h1>
+    <h1 class="py-4 text-3xl font-bold">{{ $t("pages.home.title") }}</h1>
   </div>
   <div class="mx-auto px-10 py-8">
     <ul class="w-full space-y-4">
-      <li>👋 {{ $t("page.home.subtitle") }}</li>
+      <li>👋 {{ $t("pages.home.subtitle") }}</li>
       <li>
         🛠️ Currently making:
         <NuxtLink :to="localePath('2024-taiwan')" class="underline">{{
-          $t("page.home.making")
+          $t("pages.home.making")
         }}</NuxtLink>
       </li>
     </ul>
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+const { t } = useI18n();
+const localePath = useLocalePath();
 
-<style lang="scss" scoped>
-/* Improved code with the use of Tailwind CSS classes */
-</style>
+const pageTitle = t("pages.home.tab");
+const pageDescription = t("pages.home.subtitle");
+
+useSeoMeta({
+  title: pageTitle,
+  ogTitle: pageTitle,
+  description: pageDescription,
+  ogDescription: pageDescription,
+  robots: "index, follow",
+  ogType: "website",
+});
+</script>

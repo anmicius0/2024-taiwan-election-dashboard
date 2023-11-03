@@ -4,10 +4,10 @@
     style="text-wrap: balance"
   >
     <h1 class="my-5 text-3xl text-gray-900 md:text-4xl">
-      {{ $t(`page.${page}.title`) }}
+      {{ $t(`pages.${page}.title`) }}
     </h1>
     <p class="m-5 text-sm text-gray-600 md:text-base">
-      {{ $t(`page.${page}.subtitle`) }}
+      {{ $t(`pages.${page}.subtitle`) }}
     </p>
   </div>
 </template>

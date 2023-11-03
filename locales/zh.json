@@ -1,45 +1,75 @@
 {
-  "header": {
-    "title": "林紹恆 Allen Spring",
-    "taiwan": "2024總統民調",
-    "blog": "文章"
-  },
-  "footer": {
-    "about": {
-      "title": "關於林紹恆",
-      "description": "我是一名資工系學生，對社會問題感興趣。我喜歡編程和創造一些有趣的東西。 我認為編程是一種藝術，可以表達自己的想法和情感。 我希望能通過我的技能，為社會帶來正面的影響。"
+  "components": {
+    "header": {
+      "title": "林紹恆 Allen Spring",
+      "taiwan": "2024總統民調",
+      "blog": "文章"
     },
-    "donation": {
-      "title": "順手捐款，救救窮學生",
-      "revolut": "Revolut (信用卡捐款)"
+    "footer": {
+      "about": {
+        "title": "關於林紹恆",
+        "description": "我是一名資工系學生，對社會問題感興趣。我喜歡編程和創造一些有趣的東西。 我認為編程是一種藝術，可以表達自己的想法和情感。 我希望能通過我的技能，為社會帶來正面的影響。"
+      },
+      "donation": {
+        "title": "順手捐款，救救窮學生",
+        "revolut": "Revolut (信用卡捐款)"
+      }
+    },
+    "oplist": {
+      "title": "最新民調",
+      "institution": "機構",
+      "date": "起始日期",
+      "sample": "樣本數",
+      "dpp": "賴清德",
+      "tpp": "柯文哲",
+      "kmt": "侯友宜",
+      "gtm": "郭台民",
+      "undecided": "未決定",
+      "more": "看全部民調"
+    },
+    "countdown": {
+      "title": "距離選舉還有",
+      "days": "天 ",
+      "hours": "小時 ",
+      "minutes": "分鐘 ",
+      "seconds": "秒"
+    },
+    "opchart": {
+      "filters": {
+        "formosa": "美麗島 (親民進黨)",
+        "cnews": "CNews (🇨🇳親中)",
+        "newtalk": "NewTalk",
+        "ettoday": "ETtoday (🇨🇳親中)",
+        "tpof": "台灣民意基金會",
+        "tvbs": "TVBS (🇨🇳親中)"
+      }
     }
   },
-  "oplist": {
-    "title": "最新民調",
-    "institution": "機構",
-    "date": "日期",
-    "sample": "樣本數",
-    "dpp": "賴清德",
-    "tpp": "柯文哲",
-    "kmt": "侯友宜",
-    "gtm": "郭台民",
-    "undecided": "未決定",
-    "more": "看全部民調"
-  },
-  "page": {
+  "pages": {
     "home": {
+      "tab": "主頁",
       "title": "Hi, 我是林紹恆 aka. Allen Spring",
       "subtitle": "我喜歡編程和創造一些有趣的東西",
       "making": "（應該）比較準的 2024台灣總統大選民調整合",
       "link": "2024-Taiwan"
     },
     "election": {
-      "title": "（應該）比較準的民調整合",
-      "subtitle": "為了減少政治操作對選舉民調的影響，我們可以通過將多個不同來源的民調資料進行綜合平均，提供更客觀和可靠的選民意向資訊。"
-    },
-    "all-op": {
-      "title": "全部最新民調",
-      "subtitle": ""
+      "home": {
+        "title": "（應該）比較準的民調整合",
+        "subtitle": "為了減少政治操作對選舉民調的影響，我們可以通過將多個不同來源的民調資料進行綜合平均，提供更客觀和可靠的選民意向資訊。"
+      },
+      "all-op": {
+        "title": "全部最新民調",
+        "subtitle": ""
+      }
+    }
+  },
+  "data": {
+    "candidates": {
+      "dpp": "賴清德",
+      "kmt": "侯友宜",
+      "tpp": "科文哲",
+      "gtm": "郭台銘"
     }
   }
 }
