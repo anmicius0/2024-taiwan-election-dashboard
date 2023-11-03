@@ -41,5 +41,11 @@
       "title": "All latest polls",
       "subtitle": ""
     }
+  },
+  "candidates": {
+    "dpp": "Lai Ching-te",
+    "kmt": "Hou Yu-ih",
+    "tpp": "Ko Wen-je",
+    "gtm": "Terry Gou"
   }
 }
