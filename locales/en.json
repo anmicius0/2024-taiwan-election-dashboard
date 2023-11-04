@@ -6,11 +6,11 @@
   },
   "footer": {
     "about": {
-      "title": "About Lin Shaoheng",
+      "title": "About Allen Spring",
       "description": "I am an engineering student who is interested in social issues. I like programming and creating some interesting things. I think programming is an art that can express one's thoughts and emotions. I hope to be able to express myself through My skills can bring positive impact to society."
     },
     "donation": {
-      "title": "Donate easily to save poor students",
+      "title": "Easily Donate, Empower Future Geniuses!",
       "revolut": "Revolut (credit card donation)"
     }
   },
@@ -28,18 +28,21 @@
   },
   "page": {
     "home": {
+      "tab": "Home",
       "title": "Hi, I'm Allen Spring",
       "subtitle": "I study computer science and I make shits",
       "making": "2024 Taiwan election dashboard",
       "link": "2024-Taiwan"
     },
-    "election": {
-      "title": "(Should be) a more accurate opinion poll aggregation",
-      "subtitle": "In order to reduce the impact of political manipulation on election polls, we can provide more objective and reliable information on voter intentions by averaging poll data from multiple different sources."
-    },
-    "all-op": {
-      "title": "All latest polls",
-      "subtitle": ""
+    "2024-taiwan": {
+      "home": {
+        "title": "2024 Taiwan presidential election opinion polls aggregation",
+        "subtitle": "In order to reduce the impact of political manipulation on election polls, we can provide more objective and reliable information on voter intentions by averaging poll data from multiple different sources."
+      },
+      "all-op": {
+        "title": "Latest poll",
+        "subtitle": ""
+      }
     }
   },
   "candidates": {

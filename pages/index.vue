@@ -1,7 +1,5 @@
 <template>
-  <div
-    class="text-centerjustify-center flex flex-col items-center space-y-4 text-center"
-  >
+  <div class="flex flex-col items-center justify-center space-y-4 text-center">
     <UAvatar
       size="3xl"
       src="/Tater.gif"
@@ -22,8 +20,19 @@
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+const { t } = useI18n();
+const localePath = useLocalePath();
 
-<style lang="scss" scoped>
-/* Improved code with the use of Tailwind CSS classes */
-</style>
+const pageTitle = t("page.home.tab");
+const pageDescription = t("page.home.subtitle");
+
+useSeoMeta({
+  title: pageTitle,
+  ogTitle: pageTitle,
+  description: pageDescription,
+  ogDescription: pageDescription,
+  robots: "index, follow",
+  ogType: "website",
+});
+</script>
