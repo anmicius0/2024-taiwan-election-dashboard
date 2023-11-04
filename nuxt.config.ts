@@ -2,19 +2,16 @@
 export default defineNuxtConfig({
   devtools: { enabled: process.env.NODE_ENV !== "production" },
   modules: ["@nuxtjs/google-fonts", "@nuxtjs/i18n", "@nuxt/ui"],
+  nitro: {
+    compressPublicAssets: true,
+  },
   css: ["~/assets/css/main.scss"],
   app: {
     head: {
       titleTemplate: "%s | Allen Spring",
       meta: [
-        // Each object in this array is its own meta tag
         { charset: "utf-8" },
-        { name: "viewport", content: "width=device-width, initial scale=1" },
-        {
-          hid: "description",
-          name: "description",
-          content: "Meta description",
-        },
+        { name: "viewport", content: "width=device-width, initial-scale=1" },
       ],
     },
   },
