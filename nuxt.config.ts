@@ -2,6 +2,11 @@
 export default defineNuxtConfig({
   devtools: { enabled: process.env.NODE_ENV !== "production" },
   modules: ["@nuxtjs/google-fonts", "@nuxtjs/i18n", "@nuxt/ui"],
+  buildModules: [
+    // if you are using nuxt < 2.9.0, use modules property instead.
+    "nuxt-purgecss",
+    "@nuxtjs/pwa",
+  ],
   nitro: {
     compressPublicAssets: true,
   },
@@ -12,6 +17,7 @@ export default defineNuxtConfig({
         { charset: "utf-8" },
         { name: "viewport", content: "width=device-width, initial-scale=1" },
       ],
+      link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
     },
   },
   hooks: {
@@ -29,9 +35,6 @@ export default defineNuxtConfig({
         },
       );
     },
-  },
-  runtimeConfig: {
-    public: {},
   },
   googleFonts: {
     families: {
@@ -64,4 +67,5 @@ export default defineNuxtConfig({
   colorMode: {
     preference: "light",
   },
+  pwa: {},
 });

@@ -37,11 +37,11 @@
     "opchart": {
       "filters": {
         "formosa": "美麗島 (親民進黨)",
-        "cnews": "CNews (🇨🇳親中)",
+        "cnews": "CNews🇨🇳",
         "newtalk": "NewTalk",
-        "ettoday": "ETtoday (🇨🇳親中)",
+        "ettoday": "ETtoday🇨🇳",
         "tpof": "台灣民意基金會",
-        "tvbs": "TVBS (🇨🇳親中)"
+        "tvbs": "TVBS🇨🇳"
       }
     }
   },

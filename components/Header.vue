@@ -6,7 +6,7 @@
     >
       <div class="flex w-full justify-between">
         <!-- Logo -->
-        <NuxtLink :to="localePath('/')" class="text-xl font-bold">
+        <NuxtLink :to="localePath('/')" class="flex text-xl font-bold">
           {{ $t("components.header.title") }}
         </NuxtLink>
 

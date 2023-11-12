@@ -1,8 +1,8 @@
 <template>
-  <GeneralTitle page="election.home" />
-  <OpChart />
-  <Countdown />
-  <OpList />
+  <LazyGeneralTitle page="election.home" />
+  <LazyOpChart />
+  <LazyCountdown />
+  <LazyOpList />
 </template>
 
 <script setup>

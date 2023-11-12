@@ -63,8 +63,7 @@ export const drawChart = (chart, data) => {
 
 import color from "assets/color.json";
 
-const createDataset = (data, type, name) => {
-  const { t } = useI18n();
+const createDataset = (data, type, name, t) => {
   if (type === "scatter") {
     return {
       type,
@@ -92,13 +91,13 @@ const createDataset = (data, type, name) => {
   }
 };
 
-export const getData = (data, filter) => {
+export const getData = (data, filter, t) => {
   const pdata = data.filter((item) => !filter.includes(item.institution));
   const adata = calculateMovingAverage(pdata, 7);
 
   return ["dpp", "tpp", "kmt", "gtm"].flatMap((name) => [
-    createDataset(adata, "line", name),
-    createDataset(pdata, "scatter", name),
+    createDataset(adata, "line", name, t),
+    createDataset(pdata, "scatter", name, t),
   ]);
 };
 

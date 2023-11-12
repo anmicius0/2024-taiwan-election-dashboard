@@ -26,3 +26,5 @@ logs
 
 pnpm-lock.yaml
 op-403008-00985479272e.json
+sw.*
+

@@ -48,7 +48,7 @@ const state = reactive({
     value: true,
   },
   newtalk: {
-    name: t("components.opchart.filters."),
+    name: t("components.opchart.filters.newtalk"),
     code: "新頭殼",
     value: true,
   },
@@ -69,7 +69,7 @@ const state = reactive({
   },
 });
 const filter = computed(() => getFilter(state));
-const chartData = computed(() => getData(p4, filter.value));
+const chartData = computed(() => getData(p4, filter.value, t));
 
 let myChart;
 

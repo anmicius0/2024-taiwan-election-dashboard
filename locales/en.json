@@ -1,13 +1,13 @@
 {
   "components": {
     "header": {
-      "title": "林Shaoheng Allen Spring",
-      "taiwan": "2024 presidential poll",
-      "blog": "article"
+      "title": "Allen Spring",
+      "taiwan": "2024 Taiwan Election",
+      "blog": "Blog"
     },
     "footer": {
       "about": {
-        "title": "About Lin Shaoheng",
+        "title": "About Allen Spring",
         "description": "I am an engineering student who is interested in social issues. I like programming and creating some interesting things. I think programming is an art that can express one's thoughts and emotions. I hope to be able to express myself through My skills can bring positive impact to society."
       },
       "donation": {
@@ -28,7 +28,7 @@
       "more": "See all polls"
     },
     "countdown": {
-      "title": "There is still time until the election",
+      "title": "Time till election",
       "days": "days",
       "hours": "hours",
       "minutes": "minutes",
@@ -48,15 +48,15 @@
   "pages": {
     "home": {
       "tab": "Homepage",
-      "title": "Hi, I am Lin Shaoheng aka. Allen Spring",
+      "title": "Hi, I am Allen Spring",
       "subtitle": "I like programming and creating interesting things",
       "making": "(should be) a relatively accurate combination of voters for the 2024 Taiwan presidential election",
       "link": "2024-Taiwan"
     },
     "election": {
       "home": {
-        "title": "(Should be) a more accurate poll synthesis",
-        "subtitle": "In order to reduce the impact of political manipulation on election polls, we can provide more objective and reliable information on voter intentions by averaging poll data from multiple different sources."
+        "title": "(Probably) more accurate opinion pollls aggregation of 2024 Taiwan election",
+        "subtitle": "To combat political manipulation in election polls, we're dedicated to presenting a more objective and credible view of voter intentions. We achieve this by skillfully blending poll data from various sources, ensuring an accurate and honest representation of public opinion."
       }
     }
   },
