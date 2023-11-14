@@ -6,7 +6,12 @@
 
     <UTable :rows="rows" :columns="columns" />
     <div class="flex justify-end px-3 py-3.5">
-      <UPagination v-model="page" :page-count="pageCount" :total="p4.length" />
+      <UPagination
+        size="lg"
+        v-model="page"
+        :page-count="pageCount"
+        :total="p4.length"
+      />
     </div>
   </div>
 </template>
@@ -26,12 +31,14 @@ const columns = [
   { key: "undecided", label: t("components.oplist.undecided") },
 ];
 
+const itemsPerPage = 10; // Items per page
 const page = ref(1);
-const pageCount = 10;
+const totalItems = p4.length;
+const pageCount = computed(() => Math.ceil(totalItems / itemsPerPage));
 
 const rows = computed(() => {
-  return p4.slice((page.value - 1) * pageCount, page.value * pageCount);
+  const startIndex = (page.value - 1) * itemsPerPage;
+  const endIndex = page.value * itemsPerPage;
+  return p4.slice(startIndex, endIndex);
 });
 </script>
-
-<style lang="scss" scoped></style>

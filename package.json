@@ -1,36 +1,39 @@
 {
-  "name": "nuxt-app",
+  "name": "as-blog",
   "private": true,
   "type": "module",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
+    "analyze": "nuxt build --analyze",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
+    "@nuxtjs/fontaine": "^0.4.1",
     "@nuxtjs/google-fonts": "^3.0.2",
     "@nuxtjs/i18n": "8.0.0-rc.5",
-    "@nuxtjs/pwa": "^3.3.5",
+    "@nuxtjs/tailwindcss": "^6.9.4",
+    "@vite-pwa/nuxt": "^0.2.3",
+    "@zadigetvoltaire/nuxt-gtm": "^0.0.13",
     "nuxt": "^3.7.4",
     "nuxt-primevue": "^0.1.0",
-    "nuxt-purgecss": "^2.0.0",
+    "nuxt-simple-sitemap": "^4.1.0",
     "prettier": "^3.0.3",
     "prettier-plugin-tailwindcss": "^0.5.6",
     "sass": "^1.69.5",
     "vue": "^3.3.4",
-    "vue-router": "^4.2.5"
+    "vue-router": "^4.2.5",
+    "webpack-bundle-analyzer": "^4.10.0"
   },
   "dependencies": {
     "@google-cloud/storage": "^7.3.1",
     "@koa/router": "^12.0.1",
     "@nuxt/ui": "^2.9.0",
-    "chart.js": "^4.4.0",
-    "chartjs-adapter-date-fns": "^3.0.0",
-    "chartjs-plugin-crosshair": "^2.0.0",
-    "date-fns": "^2.30.0",
+    "@nuxtjs/robots": "^3.0.0",
+    "dotenv": "^16.3.1",
     "echarts": "^5.4.3",
     "lodash-es": "^4.17.21"
   }

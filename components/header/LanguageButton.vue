@@ -1,6 +1,10 @@
 <template>
   <UDropdown :items="items" :popper="{ placement: 'bottom-start' }">
-    <UButton color="white" icon="i-heroicons-globe-alt" />
+    <UButton
+      color="white"
+      icon="i-heroicons-globe-alt"
+      aria-label="Language switch button"
+    />
     <template #item="{ item }">
       <NuxtLink :to="switchLocalePath(item.code)">{{ item.label }}</NuxtLink>
     </template>

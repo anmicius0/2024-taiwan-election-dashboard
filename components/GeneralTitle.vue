@@ -14,6 +14,9 @@
 
 <script setup>
 const props = defineProps({
-  page: String,
+  page: {
+    type: String,
+    required: true,
+  },
 });
 </script>

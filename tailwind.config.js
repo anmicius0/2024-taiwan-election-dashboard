@@ -1,6 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [],
+  content: [
+    "./pages/**/*.{html,js,vue}",
+    "./components/**/*.{html,js,vue}",
+    "./layouts/**/*.{html,js,vue}",
+  ],
   important: true,
   theme: {
     theme: {
@@ -9,7 +13,7 @@ export default {
       },
     },
     fontFamily: {
-      serif: ['"Noto Serif TC"', "Georgia"],
+      serif: ['"Noto Serif TC"'],
       body: ['"Noto Serif TC"'],
     },
   },

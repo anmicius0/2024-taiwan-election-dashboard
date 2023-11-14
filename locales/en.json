@@ -35,13 +35,40 @@
       "seconds": "seconds"
     },
     "opchart": {
+      "sources": "Sources",
       "filters": {
         "formosa": "Formosa (pro DPP)",
-        "cnews": "CNews (🇨🇳 Chinese tie)",
+        "cnews": "CNews🇨🇳",
         "newtalk": "NewTalk",
-        "ettoday": "ETtoday (🇨🇳 Chinese tie)",
+        "ettoday": "ETtoday🇨🇳",
         "tpof": "TPOF",
-        "tvbs": "TVBS (🇨🇳 Chinese tie)"
+        "tvbs": "TVBS🇨🇳"
+      }
+    },
+    "explainer": {
+      "0": {
+        "title": "What are media with chinese tie (🇨🇳)",
+        "content": "The medias are in the list of medias that attended a 2019 conference in Beijing. The main goal of that conference is to promote the \" Chinese value \". See the full list: {url}"
+      },
+      "1": {
+        "title": "What are the major issues driving the election?",
+        "content": "The 2024 presidential election in Taiwan is primarily influenced by domestic concerns, including the economy, energy policy, and foreign politics, with China-Taiwan relations being a particularly significant flashpoint​​."
+      },
+      "2": {
+        "title": "Who are the main candidates and what are their platforms?",
+        "content": "The Democratic Progressive Party (DPP) has nominated Vice President Lai Ching-te, who favors the pro-independence wing. Hou Yu-ih from the Kuomintang (KMT) represents a conciliatory approach towards China.Ko Wen-je of the Taiwan People’s Party (TPP) advocates for Taiwan's current \"status quo\" of de facto independence​​. Terry Gou, an independent candidate, is a less likely contender but could impact the election dynamics​​."
+      },
+      "3": {
+        "title": "What is the global significance of this election?",
+        "content": "The outcome of Taiwan's presidential elections has implications for the region's geopolitics, impacting the U.S. politics and economy in the Indo-Pacific. The region is significant for global trade, especially in the semiconductor and chip industry, and has strategic importance for countries like Japan and India in balancing China's influence​​."
+      },
+      "4": {
+        "title": "What are the potential geopolitical implications beyond the region?",
+        "content": "The election results could affect Europe's relations with China. For instance, Germany's strategy towards China emphasizes maintaining the status quo in the Taiwan Strait. Europe's economic dependence on China for raw materials like lithium and magnesium makes the outcome crucial​​."
+      },
+      "5": {
+        "title": "How are candidates approaching cross-Strait relations?",
+        "content": "Despite their differences, all main candidates advocate maintaining the \"status quo,\" which involves rejecting formal independence declarations, resisting China's territorial claims, retaining ties with the U.S., and opposing China's \"one country, two systems\" proposal. However, each candidate has a unique vision for implementing these policies​​."
       }
     }
   },
@@ -62,10 +89,10 @@
   },
   "data": {
     "candidates": {
-      "dpp": "Lai Qingde",
-      "kmt": "Hou Youyi",
-      "tpp": "Kewenzhe",
-      "gtm": "Tai Ming Gou"
+      "dpp": "Lai Ching-te",
+      "kmt": "Hou Yu-ih",
+      "tpp": "Ko Wen-je",
+      "gtm": "Terry Gou"
     }
   }
 }

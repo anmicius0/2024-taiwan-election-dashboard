@@ -2,7 +2,7 @@
   <div>
     <UAlert
       :title="$t('components.countdown.title')"
-      color="amber"
+      color="primary"
       variant="subtle"
     >
       <template #title="{ title }">
@@ -26,26 +26,31 @@
 let intervalId;
 const targetDate = ref(new Date("2024-01-12 16:00:00"));
 
-const updateTime = () => {
+const calculateTimeDifference = (endDate) => {
   const now = new Date();
-  const diff = targetDate.value.getTime() - now.getTime(); // Move this line up
-  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-  const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+  const diff = endDate.getTime() - now.getTime();
+
+  if (diff < 0) {
+    return { days: 0, hours: 0, minutes: 0, seconds: 0, past: true };
+  }
+
   return {
-    days,
-    hours,
-    minutes,
-    seconds,
+    days: Math.floor(diff / (1000 * 60 * 60 * 24)),
+    hours: Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+    minutes: Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60)),
+    seconds: Math.floor((diff % (1000 * 60)) / 1000),
+    past: false,
   };
 };
 
-const countdown = ref(updateTime());
+const countdown = ref(calculateTimeDifference(targetDate.value));
 
 onMounted(() => {
   intervalId = setInterval(() => {
-    countdown.value = updateTime();
+    countdown.value = calculateTimeDifference(targetDate.value);
+    if (countdown.value.past) {
+      clearInterval(intervalId);
+    }
   }, 1000);
 });
 

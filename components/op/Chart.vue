@@ -1,25 +1,35 @@
 <template>
-  <UForm
-    :state="state"
-    class="flex flex-wrap justify-between px-6 md:w-full md:flex-row md:px-12"
+  <div
+    class="border-primary-300 flex flex-col rounded-xl border-2 px-2 py-5 text-center"
+    style="text-wrap: balance"
   >
-    <UFormGroup
-      v-for="(item, key) in state"
-      :name="key"
-      :key="key"
-      class="w-1/3 py-3 text-center"
+    <h2 class="py-4 text-xl font-medium">
+      {{ $t("components.opchart.sources") }}
+    </h2>
+    <UForm
+      :state="state"
+      class="flex flex-wrap justify-between px-6 md:w-full md:flex-row md:px-12"
     >
-      <template #description>
-        {{ item.name }}
-      </template>
+      <UFormGroup
+        v-for="(item, key) in state"
+        :name="key"
+        :key="key"
+        class="w-1/3 py-3 text-center"
+      >
+        <template #description>
+          {{ item.name }}
+        </template>
 
-      <UToggle
-        color="primary"
-        :value="item.value.toString()"
-        v-model="item.value"
-      />
-    </UFormGroup>
-  </UForm>
+        <UToggle
+          color="primary"
+          :value="item.value.toString()"
+          v-model="item.value"
+          class="my-3"
+          :aria-label="item.name"
+        />
+      </UFormGroup>
+    </UForm>
+  </div>
 
   <div class="h-96 w-full overflow-scroll">
     <div id="myChart" class="h-full md:w-full" style="width: 200vw"></div>
@@ -30,7 +40,7 @@
 import * as echarts from "echarts/core";
 import { LineChart, ScatterChart } from "echarts/charts";
 import { TooltipComponent, DatasetComponent } from "echarts/components";
-import { SVGRenderer } from "echarts/renderers";
+import { CanvasRenderer } from "echarts/renderers";
 import { debounce } from "lodash-es"; // Import debounce function
 import p4 from "/assets/p4.json";
 const { t } = useI18n();
@@ -73,15 +83,15 @@ const chartData = computed(() => getData(p4, filter.value, t));
 
 let myChart;
 
-onMounted(() => {
-  echarts.use([
-    LineChart,
-    ScatterChart,
-    TooltipComponent,
-    DatasetComponent,
-    SVGRenderer,
-  ]);
+echarts.use([
+  LineChart,
+  ScatterChart,
+  TooltipComponent,
+  DatasetComponent,
+  CanvasRenderer,
+]);
 
+onMounted(() => {
   myChart = echarts.init(document.getElementById("myChart"));
   drawChart(myChart, chartData.value);
 
@@ -89,7 +99,7 @@ onMounted(() => {
     debounce(() => {
       myChart.resize();
     }, 300),
-  ); // Debounce resize events
+  );
   resizeObserver.observe(document.getElementById("myChart"));
 
   watch(chartData, (newData) => {

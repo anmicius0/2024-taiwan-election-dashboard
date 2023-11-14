@@ -2,6 +2,7 @@
   <LazyGeneralTitle page="election.home" />
   <LazyOpChart />
   <LazyCountdown />
+  <LazyOpExplainer />
   <LazyOpList />
 </template>
 

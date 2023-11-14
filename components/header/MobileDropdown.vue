@@ -1,6 +1,10 @@
 <template>
   <UDropdown :items="pages" :popper="{ placement: 'bottom-start' }">
-    <UButton color="white" icon="i-heroicons-bars-3" />
+    <UButton
+      color="white"
+      icon="i-heroicons-bars-3"
+      aria-label="Menu dropdown"
+    />
     <template #item="{ item }">
       <NuxtLink :to="localePath(item.to)" :key="item.label">{{
         $t(`components.header.${item.label}`)
