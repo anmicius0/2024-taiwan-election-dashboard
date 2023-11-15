@@ -21,6 +21,7 @@
         </template>
 
         <UToggle
+          :id="item.code"
           color="primary"
           :value="item.value.toString()"
           v-model="item.value"

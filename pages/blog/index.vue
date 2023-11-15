@@ -1,16 +1,20 @@
 <template>
-  <div class="flex flex-col items-center justify-center space-y-4 text-center">
-    <UAvatar
-      size="3xl"
-      src="/Tater.gif"
-      alt="Avatar of Tater eating a potato"
-    />
-    <h1 class="py-4 text-3xl font-bold">🚧 Blog under construction</h1>
-  </div>
+  <GeneralTitle page="blog" />
+  <main>
+    <ContentList :path="'/' + locale + '/blog'" v-slot="{ list }">
+      <NuxtLink
+        v-for="article in list"
+        :key="article._path"
+        :to="article._path"
+        class="py-6"
+      >
+        {{ console.log(article) }}
+        <h2 class="pt-4 text-lg font-bold underline">{{ article.title }}</h2>
+      </NuxtLink>
+    </ContentList>
+  </main>
 </template>
 
-<script setup></script>
-
-<style lang="scss" scoped>
-/* Improved code with the use of Tailwind CSS classes */
-</style>
+<script setup>
+const { locale } = useI18n();
+</script>

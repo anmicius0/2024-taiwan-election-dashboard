@@ -10,6 +10,7 @@ export default defineNuxtConfig({
     "@zadigetvoltaire/nuxt-gtm",
     "@vite-pwa/nuxt",
     "@nuxtjs/google-fonts",
+    "@nuxt/content",
   ],
   nitro: {
     compressPublicAssets: true,
@@ -53,6 +54,7 @@ export default defineNuxtConfig({
     },
   },
   i18n: {
+    strategy: "prefix_and_default",
     locales: [
       { code: "en", name: "English", iso: "en", file: "en.json" },
       { code: "zh", name: "中文", iso: "zh", file: "zh.json" },
@@ -61,7 +63,6 @@ export default defineNuxtConfig({
     defaultLocale: "en",
     lazy: true,
     langDir: "locales",
-    strategy: "prefix",
     detectBrowserLanguage: {
       useCookie: true,
       cookieKey: "i18n_redirected",

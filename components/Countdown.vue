@@ -1,6 +1,7 @@
 <template>
   <div>
     <UAlert
+      id="countDown"
       :title="$t('components.countdown.title')"
       color="primary"
       variant="subtle"

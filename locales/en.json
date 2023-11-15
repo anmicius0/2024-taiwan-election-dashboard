@@ -52,39 +52,36 @@
       },
       "1": {
         "title": "What are the major issues driving the election?",
-        "content": "The 2024 presidential election in Taiwan is primarily influenced by domestic concerns, including the economy, energy policy, and foreign politics, with China-Taiwan relations being a particularly significant flashpoint​​."
+        "content": "In the 2024 Taiwan presidential election, major driving issues include domestic challenges like energy policy, national defense, economic development, the COVID-19 vaccine rollout, housing costs, and economic struggles. Internationally, the election is influenced by Taiwan’s relations with Mainland China and the United States, alongside broader geopolitical concerns."
       },
       "2": {
         "title": "Who are the main candidates and what are their platforms?",
-        "content": "The Democratic Progressive Party (DPP) has nominated Vice President Lai Ching-te, who favors the pro-independence wing. Hou Yu-ih from the Kuomintang (KMT) represents a conciliatory approach towards China.Ko Wen-je of the Taiwan People’s Party (TPP) advocates for Taiwan's current \"status quo\" of de facto independence​​. Terry Gou, an independent candidate, is a less likely contender but could impact the election dynamics​​."
+        "content": "The main candidates for the 2024 Taiwan Presidential Election are Lai Ching-te, the chosen successor of President Tsai Ing-wen and vice-president since 2019, Hou You-yi from the Kuomintang (KMT), Ko Wen-je from the Taiwan People's Party (TPP), and Terry Gou, the founder of Foxconn. Lai emphasizes unity, strengthening Taiwan, and ensuring its security. Hou has struggled with questions about competence and strategy. Ko has attempted to position himself as a neutral third option. Terry Gou's campaign has faced numerous scandals. Their platforms differ on cross-Strait relations, with Lai taking a cautious stance on Taiwan's independence, Hou's stance being less clear, Ko attempting to position himself as a neutral third option, and Terry Gou's stance being unclear."
       },
       "3": {
         "title": "What is the global significance of this election?",
-        "content": "The outcome of Taiwan's presidential elections has implications for the region's geopolitics, impacting the U.S. politics and economy in the Indo-Pacific. The region is significant for global trade, especially in the semiconductor and chip industry, and has strategic importance for countries like Japan and India in balancing China's influence​​."
+        "content": "The 2024 Taiwan Presidential Election holds global significance as it could impact the region's geopolitical dynamics, particularly in the context of China-Taiwan relations. The election's outcome could influence Taiwan's stance on its status as a sovereign nation or a province of China, which is a contentious issue that has implications for regional stability and international relations. The election also reflects the complex interplay of domestic politics and foreign policy, as the candidates' platforms and their positions on cross-Strait relations could shape Taiwan's role in the international community."
       },
       "4": {
-        "title": "What are the potential geopolitical implications beyond the region?",
-        "content": "The election results could affect Europe's relations with China. For instance, Germany's strategy towards China emphasizes maintaining the status quo in the Taiwan Strait. Europe's economic dependence on China for raw materials like lithium and magnesium makes the outcome crucial​​."
-      },
-      "5": {
         "title": "How are candidates approaching cross-Strait relations?",
-        "content": "Despite their differences, all main candidates advocate maintaining the \"status quo,\" which involves rejecting formal independence declarations, resisting China's territorial claims, retaining ties with the U.S., and opposing China's \"one country, two systems\" proposal. However, each candidate has a unique vision for implementing these policies​​."
+        "content": "The candidates for the 2024 Taiwan Presidential Election have different approaches to cross-Strait relations. Lai Ching-te takes a cautious stance on Taiwan's independence and wants to diversify the island's economic relationships. Hou You-yi's stance is less clear, but he has shown signs of straying from Tsai's energy policy. Ko Wen-je attempts to position himself as a neutral third option, aligning more with the pan-Blue camp and showing potential to tilt Taiwan economically and politically toward the mainland. Terry Gou's stance is unclear, but his campaign has been marked by numerous scandals. Their platforms and positions on cross-Strait relations could shape Taiwan's role in the international community and its relations with China and other countries."
       }
     }
   },
   "pages": {
     "home": {
-      "tab": "Homepage",
       "title": "Hi, I am Allen Spring",
-      "subtitle": "I like programming and creating interesting things",
-      "making": "(should be) a relatively accurate combination of voters for the 2024 Taiwan presidential election",
+      "subtitle": "Passionate about coding, I thrive on bringing innovative ideas to life through programming",
+      "making": "2024 Taiwan Election Polls: Accurate Aggregation & Analysis",
       "link": "2024-Taiwan"
     },
     "election": {
-      "home": {
-        "title": "(Probably) more accurate opinion pollls aggregation of 2024 Taiwan election",
-        "subtitle": "To combat political manipulation in election polls, we're dedicated to presenting a more objective and credible view of voter intentions. We achieve this by skillfully blending poll data from various sources, ensuring an accurate and honest representation of public opinion."
-      }
+      "title": "2024 Taiwan Election Polls: Accurate Aggregation & Analysis",
+      "subtitle": "Unbiased, comprehensive poll data from diverse sources for a clear view of the 2024 Taiwan election landscape."
+    },
+    "blog": {
+      "title": "All blog post",
+      "subtitle": "Where technology meets politics"
     }
   },
   "data": {

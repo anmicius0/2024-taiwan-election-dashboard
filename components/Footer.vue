@@ -8,7 +8,7 @@
         <h3 class="font-bold text-gray-900">
           {{ $t("components.footer.about.title") }}
         </h3>
-        <p class="py-4 text-sm text-gray-600">
+        <p id="footer-intro" class="py-4 text-sm text-gray-600">
           {{ $t("components.footer.about.description") }}
         </p>
       </section>
@@ -21,6 +21,7 @@
         <ul class="pt-3 text-sm">
           <li>
             <NuxtLink
+              id="revolut"
               class="hover:text-underline py-1 text-gray-600 no-underline hover:text-gray-900"
               to="https://revolut.me/shaohey22h"
               aria-label="Donate via Revolut"

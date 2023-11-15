@@ -46,6 +46,8 @@
 </template>
 
 <script setup>
+const localePath = useLocalePath();
+
 const pages = [
   [
     {

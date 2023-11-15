@@ -1,5 +1,5 @@
 <template>
-  <div class="px-1 py-8">
+  <div class="py-8">
     <UAccordion
       color="primary"
       variant="outline"
@@ -20,7 +20,7 @@ const accordionItems = [
       url: "https://hackmd.io/@billy3321/BJepntX3N?type=view",
     }),
   },
-  ...[1, 2, 3, 4, 5].map((i) => ({
+  ...[1, 2, 3, 4].map((i) => ({
     label: t(`components.explainer.${i}.title`),
     content: t(`components.explainer.${i}.content`),
   })),

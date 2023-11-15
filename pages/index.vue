@@ -24,7 +24,7 @@
 const { t } = useI18n();
 const localePath = useLocalePath();
 
-const pageTitle = t("pages.home.tab");
+const pageTitle = t("pages.home.title");
 const pageDescription = t("pages.home.subtitle");
 
 useSeoMeta({

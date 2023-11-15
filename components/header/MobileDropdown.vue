@@ -6,7 +6,7 @@
       aria-label="Menu dropdown"
     />
     <template #item="{ item }">
-      <NuxtLink :to="localePath(item.to)" :key="item.label">{{
+      <NuxtLink :to="item.to" :key="item.label">{{
         $t(`components.header.${item.label}`)
       }}</NuxtLink>
     </template>
