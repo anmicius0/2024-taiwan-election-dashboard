@@ -1,9 +1,9 @@
 <template>
   <LazyGeneralTitle page="election" />
-  <LazyOpChart />
-  <LazyCountdown />
-  <LazyOpExplainer />
-  <LazyOpList />
+  <LazyTw2024Chart />
+  <LazyTw2024Countdown />
+  <LazyTw2024Explainer />
+  <LazyTw2024List />
 </template>
 
 <script setup>

@@ -3,7 +3,6 @@ export default defineNuxtConfig({
   devtools: { enabled: process.env.NODE_ENV !== "production" },
   modules: [
     "@nuxtjs/i18n",
-    "@nuxt/ui",
     "@nuxtjs/tailwindcss",
     "@nuxtjs/robots",
     "nuxt-simple-sitemap",
@@ -11,6 +10,7 @@ export default defineNuxtConfig({
     "@vite-pwa/nuxt",
     "@nuxtjs/google-fonts",
     "@nuxt/content",
+    "nuxt-quasar-ui",
   ],
   nitro: {
     compressPublicAssets: true,
@@ -59,7 +59,7 @@ export default defineNuxtConfig({
       { code: "en", name: "English", iso: "en", file: "en.json" },
       { code: "zh", name: "中文", iso: "zh", file: "zh.json" },
     ],
-    baseUrl: "tps://2024-tw-presidential.vercel.app/",
+    baseUrl: "tps://allenspring.vercel.app/",
     defaultLocale: "en",
     lazy: true,
     langDir: "locales",
@@ -117,6 +117,13 @@ export default defineNuxtConfig({
           purpose: "maskable",
         },
       ],
+    },
+  },
+  quasar: {
+    config: {
+      brand: {
+        primary: "#64EF68",
+      },
     },
   },
 });

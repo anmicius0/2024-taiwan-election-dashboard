@@ -1,35 +1,32 @@
 <template>
   <div
-    class="border-primary-300 flex flex-col rounded-xl border-2 px-2 py-5 text-center"
+    class="flex flex-col rounded-xl border-2 border-green-300 px-2 py-5 text-center"
     style="text-wrap: balance"
   >
     <h2 class="py-4 text-xl font-medium">
       {{ $t("components.opchart.sources") }}
     </h2>
-    <UForm
+    <div
       :state="state"
       class="flex flex-wrap justify-between px-6 md:w-full md:flex-row md:px-12"
     >
-      <UFormGroup
+      <div
         v-for="(item, key) in state"
         :name="key"
         :key="key"
         class="w-1/3 py-3 text-center"
       >
-        <template #description>
-          {{ item.name }}
-        </template>
-
-        <UToggle
+        <q-toggle
           :id="item.code"
+          :label="item.name"
           color="primary"
-          :value="item.value.toString()"
           v-model="item.value"
           class="my-3"
+          left-label
           :aria-label="item.name"
         />
-      </UFormGroup>
-    </UForm>
+      </div>
+    </div>
   </div>
 
   <div class="h-96 w-full overflow-scroll">

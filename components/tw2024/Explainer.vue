@@ -1,11 +1,14 @@
 <template>
-  <div class="py-8">
-    <UAccordion
-      color="primary"
-      variant="outline"
-      size="lg"
-      :items="accordionItems"
-    />
+  <div class="py-6">
+    <q-list v-for="item in accordionItems">
+      <q-expansion-item :label="item.label" class="mx-0 my-3 border-2">
+        <q-card>
+          <q-card-section>
+            {{ item.content }}
+          </q-card-section>
+        </q-card>
+      </q-expansion-item>
+    </q-list>
   </div>
 </template>
 

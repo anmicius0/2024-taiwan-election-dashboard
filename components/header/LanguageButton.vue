@@ -1,26 +1,26 @@
 <template>
-  <UDropdown :items="items" :popper="{ placement: 'bottom-start' }">
-    <UButton
-      color="white"
-      icon="i-heroicons-globe-alt"
-      aria-label="Language switch button"
-    />
-    <template #item="{ item }">
-      <NuxtLink :to="switchLocalePath(item.code)">{{ item.label }}</NuxtLink>
-    </template>
-  </UDropdown>
+  <q-btn dense flat icon="language">
+    <q-menu>
+      <q-list>
+        <q-item clickable v-close-popup
+          ><q-item-section>
+            <NuxtLink :to="switchLocalePath('en')"
+              >English</NuxtLink
+            ></q-item-section
+          >
+        </q-item>
+        <q-item clickable v-close-popup
+          ><q-item-section>
+            <NuxtLink :to="switchLocalePath('zh')"
+              >中文</NuxtLink
+            ></q-item-section
+          >
+        </q-item>
+      </q-list>
+    </q-menu>
+  </q-btn>
 </template>
 
 <script setup>
-const { locales } = useI18n();
 const switchLocalePath = useSwitchLocalePath();
-
-const items = [
-  locales.value.map((lang) => {
-    return {
-      label: lang.name,
-      code: lang.code,
-    };
-  }),
-];
 </script>

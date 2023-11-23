@@ -1,16 +1,17 @@
 <template>
-  <UDropdown :items="pages" :popper="{ placement: 'bottom-start' }">
-    <UButton
-      color="white"
-      icon="i-heroicons-bars-3"
-      aria-label="Menu dropdown"
-    />
-    <template #item="{ item }">
-      <NuxtLink :to="item.to" :key="item.label">{{
-        $t(`components.header.${item.label}`)
-      }}</NuxtLink>
-    </template>
-  </UDropdown>
+  <q-btn dense flat icon="menu">
+    <q-menu>
+      <q-list>
+        <q-item clickable v-close-popup v-for="page in pages" :key="page.label"
+          ><q-item-section>
+            <NuxtLink :to="localePath(page.to)">{{
+              $t(`components.header.${page.label}`)
+            }}</NuxtLink></q-item-section
+          >
+        </q-item>
+      </q-list>
+    </q-menu>
+  </q-btn>
 </template>
 
 <script setup>

@@ -1,25 +1,21 @@
 <template>
-  <div>
-    <UAlert
-      id="countDown"
-      :title="$t('components.countdown.title')"
-      color="primary"
-      variant="subtle"
-    >
-      <template #title="{ title }">
-        <span class="text-base" v-html="title" />
-      </template>
+  <div
+    id="countDown"
+    class="flex justify-center rounded-xl border-2 p-5 text-lg"
+  >
+    <div>
+      <span class="font-bold">{{
+        $t("components.countdown.title") + ": "
+      }}</span>
 
-      <template #description>
-        <span class="text-lg font-bold">
-          {{ countdown.days }} {{ $t("components.countdown.days") }}
-          {{ countdown.hours }} {{ $t("components.countdown.hours") }}
-          {{ countdown.minutes }} {{ $t("components.countdown.minutes") }}
-          {{ countdown.seconds }}
-          {{ $t("components.countdown.seconds") }}
-        </span>
-      </template>
-    </UAlert>
+      <span>
+        {{ countdown.days }} {{ $t("components.countdown.days") }}
+        {{ countdown.hours }} {{ $t("components.countdown.hours") }}
+        {{ countdown.minutes }} {{ $t("components.countdown.minutes") }}
+        {{ countdown.seconds }}
+        {{ $t("components.countdown.seconds") }}
+      </span>
+    </div>
   </div>
 </template>
 

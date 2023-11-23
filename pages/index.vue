@@ -1,10 +1,12 @@
 <template>
   <div class="flex flex-col items-center justify-center space-y-4 text-center">
-    <UAvatar
-      size="3xl"
+    <q-avatar
+      size="150px"
       src="/Tater.gif"
       alt="Avatar of Tater eating a potato"
-    />
+    >
+      <img src="/Tater.gif" />
+    </q-avatar>
     <h1 class="py-4 text-3xl font-bold">{{ $t("pages.home.title") }}</h1>
   </div>
   <div class="mx-auto px-10 py-8">
@@ -12,7 +14,7 @@
       <li>👋 {{ $t("pages.home.subtitle") }}</li>
       <li>
         🛠️ Currently making:
-        <NuxtLink :to="localePath('2024-taiwan')" class="underline">{{
+        <NuxtLink :to="localePath('tw2024')" class="underline">{{
           $t("pages.home.making")
         }}</NuxtLink>
       </li>
