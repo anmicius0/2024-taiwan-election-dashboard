@@ -23,7 +23,6 @@
       "dpp": "Lai Qingde",
       "tpp": "Ke Wenzhe",
       "kmt": "Hou Youyi",
-      "gtm": "Guo Taimin",
       "undecided": "undecided",
       "more": "See all polls"
     },
@@ -88,8 +87,7 @@
     "candidates": {
       "dpp": "Lai Ching-te",
       "kmt": "Hou Yu-ih",
-      "tpp": "Ko Wen-je",
-      "gtm": "Terry Gou"
+      "tpp": "Ko Wen-je"
     }
   }
 }

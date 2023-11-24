@@ -40,7 +40,7 @@ import { LineChart, ScatterChart } from "echarts/charts";
 import { TooltipComponent, DatasetComponent } from "echarts/components";
 import { CanvasRenderer } from "echarts/renderers";
 import { debounce } from "lodash-es"; // Import debounce function
-import p4 from "/assets/p4.json";
+import p3 from "/assets/p3.json";
 const { t } = useI18n();
 
 // States
@@ -77,7 +77,7 @@ const state = reactive({
   },
 });
 const filter = computed(() => getFilter(state));
-const chartData = computed(() => getData(p4, filter.value, t));
+const chartData = computed(() => getData(p3, filter.value, t));
 
 let myChart;
 

@@ -9,14 +9,14 @@ const calculateMovingAverage = (polls, windowSize = 7) => {
   const dailyAverages = Object.entries(groupedPolls).map(
     ([date, datePolls]) => {
       const sums = datePolls.reduce((sum, poll) => {
-        ["dpp", "kmt", "tpp", "gtm", "undecided"].forEach((key) => {
+        ["dpp", "kmt", "tpp", "undecided"].forEach((key) => {
           sum[key] = (sum[key] || 0) + poll[key];
         });
         return sum;
       }, {});
 
       const averages = { date: date.split("T")[0] }; // Format date to 'yyyy-mm-dd'
-      ["dpp", "kmt", "tpp", "gtm", "undecided"].forEach((key) => {
+      ["dpp", "kmt", "tpp", "undecided"].forEach((key) => {
         averages[key] = sums[key] / datePolls.length;
       });
 
@@ -34,7 +34,7 @@ const calculateMovingAverage = (polls, windowSize = 7) => {
     const slice = array.slice(start, end);
 
     const movingAvg = { date: array[index].date };
-    ["dpp", "kmt", "tpp", "gtm", "undecided"].forEach((key) => {
+    ["dpp", "kmt", "tpp", "undecided"].forEach((key) => {
       movingAvg[key] =
         slice.reduce((sum, current) => sum + current[key], 0) / slice.length;
     });
@@ -95,7 +95,7 @@ export const getData = (data, filter, t) => {
   const pdata = data.filter((item) => !filter.includes(item.institution));
   const adata = calculateMovingAverage(pdata, 7);
 
-  return ["dpp", "tpp", "kmt", "gtm"].flatMap((name) => [
+  return ["dpp", "tpp", "kmt"].flatMap((name) => [
     createDataset(adata, "line", name, t),
     createDataset(pdata, "scatter", name, t),
   ]);

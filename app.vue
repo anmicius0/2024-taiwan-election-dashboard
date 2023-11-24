@@ -13,16 +13,18 @@ const { locale } = useI18n();
 
 useHead({
   htmlAttrs: {
-    lang: locale,
+    lang: locale.value, // Ensure dynamic reactivity for language changes
   },
-});
-
-useSeoMeta({
-  charset: "utf-8",
-  author: "Allen Spring",
-  creator: "Allen Spring",
-  robots: "index, follow",
-  googleSiteVerification: "d1e-XaWdje3IjMVq1UjHI7kV6BjaIXJw6eZNwDg4eOY",
-  themeColor: "#64EF68",
+  meta: [
+    { charset: "utf-8" },
+    { name: "author", content: "Allen Spring" },
+    { name: "creator", content: "Allen Spring" },
+    { name: "robots", content: "index, follow" },
+    {
+      name: "google-site-verification",
+      content: "d1e-XaWdje3IjMVq1UjHI7kV6BjaIXJw6eZNwDg4eOY",
+    },
+    { name: "theme-color", content: "#64EF68" },
+  ],
 });
 </script>
