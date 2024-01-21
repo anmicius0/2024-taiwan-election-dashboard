@@ -9,11 +9,9 @@
 </template>
 
 <script setup>
-const { locale } = useI18n();
-
 useHead({
   htmlAttrs: {
-    lang: locale.value, // Ensure dynamic reactivity for language changes
+    lang: "en",
   },
   meta: [
     { charset: "utf-8" },

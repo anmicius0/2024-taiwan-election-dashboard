@@ -42,7 +42,16 @@ const calculateMovingAverage = (polls, windowSize = 7) => {
     return movingAvg;
   });
 
-  return movingAverages;
+  const voteShare = movingAverages.map((entry) => {
+    const base = entry.dpp + entry.kmt + entry.tpp;
+    ["dpp", "kmt", "tpp", "undecided"].forEach((key) => {
+      entry[key] = (entry[key] / base) * 100;
+    });
+
+    return entry;
+  });
+
+  return voteShare;
 };
 
 export const drawChart = (chart, data) => {
@@ -63,7 +72,7 @@ export const drawChart = (chart, data) => {
 
 import color from "assets/color.json";
 
-const createDataset = (data, type, name, t) => {
+const createDataset = (data, type, name) => {
   if (type === "scatter") {
     return {
       type,
@@ -81,7 +90,7 @@ const createDataset = (data, type, name, t) => {
     return {
       type,
       data: data.map((d) => [d.date, d[name]]),
-      name: t(`data.candidates.${name}`),
+      name: name,
       showSymbol: false,
       itemStyle: {
         color: color[name],
@@ -91,13 +100,13 @@ const createDataset = (data, type, name, t) => {
   }
 };
 
-export const getData = (data, filter, t) => {
+export const getData = (data, filter) => {
   const pdata = data.filter((item) => !filter.includes(item.institution));
   const adata = calculateMovingAverage(pdata, 7);
 
   return ["dpp", "tpp", "kmt"].flatMap((name) => [
-    createDataset(adata, "line", name, t),
-    createDataset(pdata, "scatter", name, t),
+    createDataset(adata, "line", name),
+    createDataset(pdata, "scatter", name),
   ]);
 };
 

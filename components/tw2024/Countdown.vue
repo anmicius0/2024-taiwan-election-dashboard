@@ -4,16 +4,13 @@
     class="flex justify-center rounded-xl border-2 p-5 text-lg"
   >
     <div>
-      <span class="font-bold">{{
-        $t("components.countdown.title") + ": "
-      }}</span>
+      <span class="font-bold">{{ "Time till election" + ": " }}</span>
 
       <span>
-        {{ countdown.days }} {{ $t("components.countdown.days") }}
-        {{ countdown.hours }} {{ $t("components.countdown.hours") }}
-        {{ countdown.minutes }} {{ $t("components.countdown.minutes") }}
+        {{ countdown.days }} {{ "days" }} {{ countdown.hours }} {{ "hours" }}
+        {{ countdown.minutes }} {{ "minutes" }}
         {{ countdown.seconds }}
-        {{ $t("components.countdown.seconds") }}
+        {{ "seconds" }}
       </span>
     </div>
   </div>

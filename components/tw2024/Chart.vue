@@ -1,11 +1,10 @@
 <template>
+  <!-- Source toggle -->
   <div
     class="flex flex-col rounded-xl border-2 border-green-300 px-2 py-5 text-center"
     style="text-wrap: balance"
   >
-    <h2 class="py-4 text-xl font-medium">
-      {{ $t("components.opchart.sources") }}
-    </h2>
+    <h2 class="py-4 text-xl font-medium">Sources</h2>
     <div
       :state="state"
       class="flex flex-wrap justify-between px-6 md:w-full md:flex-row md:px-12"
@@ -29,6 +28,7 @@
     </div>
   </div>
 
+  <!-- Chart -->
   <div class="h-96 w-full overflow-scroll">
     <div id="myChart" class="h-full md:w-full" style="width: 200vw"></div>
   </div>
@@ -41,43 +41,42 @@ import { TooltipComponent, DatasetComponent } from "echarts/components";
 import { CanvasRenderer } from "echarts/renderers";
 import { debounce } from "lodash-es"; // Import debounce function
 import p3 from "/assets/p3.json";
-const { t } = useI18n();
 
 // States
 const state = reactive({
   formosa: {
-    name: t("components.opchart.filters.formosa"),
+    name: "Formosa",
     code: "美麗島",
     value: true,
   },
   cnews: {
-    name: t("components.opchart.filters.cnews"),
+    name: "CNews",
     code: "匯流",
     value: true,
   },
   newtalk: {
-    name: t("components.opchart.filters.newtalk"),
+    name: "NewTalk",
     code: "新頭殼",
     value: true,
   },
   ettoday: {
-    name: t("components.opchart.filters.ettoday"),
+    name: "ETtoday",
     code: "ETtoday",
     value: true,
   },
   tpof: {
-    name: t("components.opchart.filters.tpof"),
+    name: "TPOF",
     code: "台灣民意基金會",
     value: true,
   },
   tvbs: {
-    name: t("components.opchart.filters.tvbs"),
+    name: "TVBS",
     code: "TVBS",
     value: true,
   },
 });
 const filter = computed(() => getFilter(state));
-const chartData = computed(() => getData(p3, filter.value, t));
+const chartData = computed(() => getData(p3, filter.value));
 
 let myChart;
 

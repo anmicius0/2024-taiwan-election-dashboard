@@ -1,7 +1,7 @@
 <template>
-  <GeneralTitle page="blog" />
+  <AppTitle title="All blog post" subtitle="Where technology meets politics" />
   <main>
-    <ContentList :path="'/' + locale + '/blog'" v-slot="{ list }">
+    <ContentList path="/blog" v-slot="{ list }">
       <NuxtLink
         v-for="article in list"
         :key="article._path"
@@ -15,6 +15,4 @@
   </main>
 </template>
 
-<script setup>
-const { locale } = useI18n();
-</script>
+<script setup></script>

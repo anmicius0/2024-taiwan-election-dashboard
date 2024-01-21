@@ -1,6 +1,6 @@
 <template>
   <div class="py-6">
-    <q-list v-for="item in accordionItems">
+    <q-list v-for="item in explainers">
       <q-expansion-item :label="item.label" class="mx-0 my-3 border-2">
         <q-card>
           <q-card-section>
@@ -13,19 +13,26 @@
 </template>
 
 <script setup>
-const { t } = useI18n();
-
-const accordionItems = [
+const explainers = [
   {
-    label: t("components.explainer.0.title"),
-    defaultOpen: true,
-    content: t("components.explainer.0.content", {
-      url: "https://hackmd.io/@billy3321/BJepntX3N?type=view",
-    }),
+    label: "What are the major issues driving the election?",
+    content:
+      "In the 2024 Taiwan presidential election, major driving issues include domestic challenges like energy policy, national defense, economic development, the COVID-19 vaccine rollout, housing costs, and economic struggles. Internationally, the election is influenced by Taiwan’s relations with Mainland China and the United States, alongside broader geopolitical concerns.",
   },
-  ...[1, 2, 3, 4].map((i) => ({
-    label: t(`components.explainer.${i}.title`),
-    content: t(`components.explainer.${i}.content`),
-  })),
+  {
+    label: "Who are the main candidates and what are their platforms?",
+    content:
+      "The main candidates for the 2024 Taiwan Presidential Election are Lai Ching-te, the chosen successor of President Tsai Ing-wen and vice-president since 2019, Hou You-yi from the Kuomintang (KMT), Ko Wen-je from the Taiwan People's Party (TPP), and Terry Gou, the founder of Foxconn. Lai emphasizes unity, strengthening Taiwan, and ensuring its security. Hou has struggled with questions about competence and strategy. Ko has attempted to position himself as a neutral third option. Terry Gou's campaign has faced numerous scandals. Their platforms differ on cross-Strait relations, with Lai taking a cautious stance on Taiwan's independence, Hou's stance being less clear, Ko attempting to position himself as a neutral third option, and Terry Gou's stance being unclear.",
+  },
+  {
+    label: "What is the global significance of this election?",
+    content:
+      "The 2024 Taiwan Presidential Election holds global significance as it could impact the region's geopolitical dynamics, particularly in the context of China-Taiwan relations. The election's outcome could influence Taiwan's stance on its status as a sovereign nation or a province of China, which is a contentious issue that has implications for regional stability and international relations. The election also reflects the complex interplay of domestic politics and foreign policy, as the candidates' platforms and their positions on cross-Strait relations could shape Taiwan's role in the international community.",
+  },
+  {
+    label: "How are candidates approaching cross-Strait relations?",
+    content:
+      "The candidates for the 2024 Taiwan Presidential Election have different approaches to cross-Strait relations. Lai Ching-te takes a cautious stance on Taiwan's independence and wants to diversify the island's economic relationships. Hou You-yi's stance is less clear, but he has shown signs of straying from Tsai's energy policy. Ko Wen-je attempts to position himself as a neutral third option, aligning more with the pan-Blue camp and showing potential to tilt Taiwan economically and politically toward the mainland. Terry Gou's stance is unclear, but his campaign has been marked by numerous scandals. Their platforms and positions on cross-Strait relations could shape Taiwan's role in the international community and its relations with China and other countries.",
+  },
 ];
 </script>

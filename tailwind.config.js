@@ -13,8 +13,8 @@ export default {
       },
     },
     fontFamily: {
-      serif: ['"Noto Serif TC"'],
-      body: ['"Noto Serif TC"'],
+      sans: ["Oswald"],
+      body: ["Oswald"],
     },
   },
   plugins: [],

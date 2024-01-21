@@ -1,6 +1,6 @@
 <template>
-  <div class="bg-gray-100 font-serif">
-    <Header />
+  <div class="font-sans bg-gray-100">
+    <AppHeader />
     <main
       class="container mx-auto w-full px-5 py-20 leading-relaxed text-gray-800 md:max-w-3xl lg:max-w-4xl"
     >

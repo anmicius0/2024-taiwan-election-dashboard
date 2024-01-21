@@ -2,14 +2,11 @@
 export default defineNuxtConfig({
   devtools: { enabled: process.env.NODE_ENV !== "production" },
   modules: [
-    "@nuxtjs/i18n",
-    "@nuxtjs/tailwindcss",
-    "@nuxtjs/robots",
-    "nuxt-simple-sitemap",
-    "@zadigetvoltaire/nuxt-gtm",
     "@vite-pwa/nuxt",
-    "@nuxtjs/google-fonts",
+    "@zadigetvoltaire/nuxt-gtm",
     "@nuxt/content",
+    "@nuxtjs/tailwindcss",
+    "@nuxtjs/google-fonts",
     "nuxt-quasar-ui",
   ],
   nitro: {
@@ -46,39 +43,15 @@ export default defineNuxtConfig({
       );
     },
   },
+  // @nuxtjs/google-fonts
   googleFonts: {
     families: {
-      "Noto+Serif+TC": [400, 500, 700],
-      display: "swap",
-      base64: true,
+      Oswald: [400, 500, 700],
     },
+    display: "swap",
+    base64: true,
   },
-  i18n: {
-    strategy: "prefix_and_default",
-    locales: [
-      { code: "en", name: "English", iso: "en", file: "en.json" },
-      { code: "zh", name: "中文", iso: "zh", file: "zh.json" },
-    ],
-    baseUrl: "tps://allenspring.vercel.app/",
-    defaultLocale: "en",
-    lazy: true,
-    langDir: "locales",
-    detectBrowserLanguage: {
-      useCookie: true,
-      cookieKey: "i18n_redirected",
-      redirectOn: "root",
-      alwaysRedirect: true,
-    },
-  },
-  ui: {
-    global: true,
-  },
-  colorMode: {
-    preference: "light",
-  },
-  site: {
-    url: process.env.URL,
-  },
+  // @zadigetvoltaire/nuxt-gtm
   gtm: {
     id: process.env.GTAG,
     defer: false,
@@ -90,6 +63,7 @@ export default defineNuxtConfig({
     trackOnNextTick: false, // Whether or not call trackView in Vue.nextTick
     devtools: process.env.NODE_ENV === "development",
   },
+  // @vite-pwa/nuxt
   pwa: {
     manifest: {
       name: "Allen Spring's Blog",
@@ -119,6 +93,7 @@ export default defineNuxtConfig({
       ],
     },
   },
+  // nuxt-quasar-ui
   quasar: {
     config: {
       brand: {

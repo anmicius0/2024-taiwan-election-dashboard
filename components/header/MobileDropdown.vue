@@ -4,9 +4,7 @@
       <q-list>
         <q-item clickable v-close-popup v-for="page in pages" :key="page.label"
           ><q-item-section>
-            <NuxtLink :to="localePath(page.to)">{{
-              $t(`components.header.${page.label}`)
-            }}</NuxtLink></q-item-section
+            <NuxtLink :to="page.to">{{ page.label }}</NuxtLink></q-item-section
           >
         </q-item>
       </q-list>
@@ -15,7 +13,6 @@
 </template>
 
 <script setup>
-const localePath = useLocalePath();
 const props = defineProps({
   pages: { type: Array, required: true },
 });

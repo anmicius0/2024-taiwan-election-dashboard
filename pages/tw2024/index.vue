@@ -1,5 +1,8 @@
 <template>
-  <LazyGeneralTitle page="election" />
+  <LazyAppTitle
+    title="2024 Taiwan Election Polls: Accurate Aggregation & Analysis"
+    subtitle="Unbiased, comprehensive poll data from diverse sources for a clear view of the 2024 Taiwan election landscape."
+  />
   <LazyTw2024Chart />
   <LazyTw2024Countdown />
   <LazyTw2024Explainer />
@@ -7,9 +10,9 @@
 </template>
 
 <script setup>
-const { t } = useI18n();
-const title = t("pages.election.title");
-const subtitle = t("pages.election.subtitle");
+const title = "2024 Taiwan Election Polls: Accurate Aggregation & Analysis";
+const subtitle =
+  "Unbiased, comprehensive poll data from diverse sources for a clear view of the 2024 Taiwan election landscape.";
 
 useSeoMeta({
   title: title,
