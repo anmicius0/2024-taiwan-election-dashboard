@@ -8,6 +8,7 @@ dist
 
 # Node dependencies
 node_modules
+*.lockb
 
 # Logs
 logs
@@ -23,8 +24,4 @@ logs
 .env.*
 !.env.example
 
-
-pnpm-lock.yaml
-op-403008-00985479272e.json
-sw.*
 
