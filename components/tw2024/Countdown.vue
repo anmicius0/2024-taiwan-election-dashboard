@@ -4,20 +4,16 @@
     class="flex justify-center rounded-xl border-2 p-5 text-lg"
   >
     <div>
-      <span class="font-bold">{{ "Time till election" + ": " }}</span>
-
+      <span class="font-bold">Time till election: </span>
       <span>
-        {{ countdown.days }} {{ "days" }} {{ countdown.hours }} {{ "hours" }}
-        {{ countdown.minutes }} {{ "minutes" }}
-        {{ countdown.seconds }}
-        {{ "seconds" }}
+        {{ countdown.days }} days {{ countdown.hours }} hours
+        {{ countdown.minutes }} minutes {{ countdown.seconds }} seconds
       </span>
     </div>
   </div>
 </template>
 
 <script setup>
-let intervalId;
 const targetDate = ref(new Date("2024-01-12 16:00:00"));
 
 const calculateTimeDifference = (endDate) => {
@@ -37,11 +33,10 @@ const calculateTimeDifference = (endDate) => {
   };
 };
 
-const countdown = ref(calculateTimeDifference(targetDate.value));
+const countdown = computed(() => calculateTimeDifference(targetDate.value));
 
 onMounted(() => {
-  intervalId = setInterval(() => {
-    countdown.value = calculateTimeDifference(targetDate.value);
+  const intervalId = setInterval(() => {
     if (countdown.value.past) {
       clearInterval(intervalId);
     }

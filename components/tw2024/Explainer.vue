@@ -1,7 +1,12 @@
 <template>
   <div class="py-6">
-    <q-list v-for="item in explainers">
-      <q-expansion-item :label="item.label" class="mx-0 my-3 border-2">
+    <q-list>
+      <q-expansion-item
+        v-for="(item, index) in explainers"
+        :key="index"
+        :label="item.label"
+        class="mx-0 my-3 border-2"
+      >
         <q-card>
           <q-card-section>
             {{ item.content }}

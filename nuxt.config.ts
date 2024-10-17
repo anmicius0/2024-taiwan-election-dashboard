@@ -1,17 +1,19 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: process.env.NODE_ENV !== "production" },
+
   modules: [
     "@vite-pwa/nuxt",
-    "@zadigetvoltaire/nuxt-gtm",
     "@nuxt/content",
     "@nuxtjs/tailwindcss",
     "@nuxtjs/google-fonts",
     "nuxt-quasar-ui",
   ],
+
   nitro: {
     compressPublicAssets: true,
   },
+
   app: {
     head: {
       titleTemplate: "%s | Allen Spring",
@@ -27,22 +29,7 @@ export default defineNuxtConfig({
       link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
     },
   },
-  hooks: {
-    "build:before": async () => {
-      const { exec } = require("child_process");
-      exec(
-        "node gcs.js",
-        (error: Error | null, stdout: string, stderr: string) => {
-          if (error) {
-            console.error(`Error: ${error}`);
-            return;
-          }
-          console.log(`stdout: ${stdout}`);
-          console.error(`stderr: ${stderr}`);
-        },
-      );
-    },
-  },
+
   // @nuxtjs/google-fonts
   googleFonts: {
     families: {
@@ -51,18 +38,7 @@ export default defineNuxtConfig({
     display: "swap",
     base64: true,
   },
-  // @zadigetvoltaire/nuxt-gtm
-  gtm: {
-    id: process.env.GTAG,
-    defer: false,
-    compatibility: false, // Will add `async` and `defer` to the script tag to not block requests for old browsers that do not support `async`
-    enabled: true, // defaults to true. Plugin can be disabled by setting this to false for Ex: enabled: !!GDPR_Cookie (optional)
-    debug: process.env.NODE_ENV === "development", // Whether or not display console logs debugs (optional)
-    loadScript: true, // Whether or not to load the GTM Script (Helpful if you are including GTM manually, but need the dataLayer functionality in your components) (optional)
-    enableRouterSync: true, // Pass the router instance of your app to automatically sync with router (optional)
-    trackOnNextTick: false, // Whether or not call trackView in Vue.nextTick
-    devtools: process.env.NODE_ENV === "development",
-  },
+
   // @vite-pwa/nuxt
   pwa: {
     manifest: {
@@ -93,6 +69,7 @@ export default defineNuxtConfig({
       ],
     },
   },
+
   // nuxt-quasar-ui
   quasar: {
     config: {
@@ -101,4 +78,6 @@ export default defineNuxtConfig({
       },
     },
   },
+
+  compatibilityDate: "2024-10-17",
 });
